@@ -77,7 +77,7 @@ def SaveView(request):
                 id_product=product_obj,
                 )
             if created:
-                return redirect('aliments_off:my_products')
+                return redirect('aliments_off:myproducts')
             else:
                 return redirect(next_url+"?allreadysaved")
     return redirect('homepage')
@@ -86,7 +86,7 @@ def SaveView(request):
 class MyProductsView(LoginRequiredMixin, ListView):
     """Show saved products."""
     template_name = 'aliments_off/my_products.html'
-    paginate_by = 5
+    paginate_by = 1
 
     def get_queryset(self):
         return SaveProducts.objects.filter(

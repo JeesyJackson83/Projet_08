@@ -17,7 +17,7 @@
         {% for sl in object_list %}
         <div class="row align-items-center justify-content-center">
           <div class="col-4 mx-1 px-0">
-            <div class="product-thumb-myproduct">
+            <div class="product-thumb-my_product">
               <div class="nutriscore nutriscore-{{sl.id_product.nutritional_score|upper}} text-center"></div>
               <a href="{% url 'aliments_off:detail' sl.id_product.id %}">
                 <img src="{{sl.id_product.img_url}}" class="rounded mx-auto d-block" alt="">
@@ -31,7 +31,7 @@
             <i class="fas fa-arrow-right"></i>
           </div>
           <div class="col-4 mx-1 px-0">
-            <div class="product-thumb-myproduct">
+            <div class="product-thumb-my_product">
               <div class="nutriscore nutriscore-{{sl.substitute_id.nutrition_grades|upper}} text-center"></div>
                 <a href="{% url 'products:detail' sl.substitute_id.id %}">
                   <img src="{{sl.substitute_id.image_url}}" class="rounded mx-auto d-block" alt="">

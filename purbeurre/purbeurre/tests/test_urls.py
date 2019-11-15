@@ -35,9 +35,13 @@ class TestUrls(SimpleTestCase):
         url = reverse('aliments_off:search')
         self.assertEquals(resolve(url).func.view_class, SearchView)
 
-    # def test_search_url_resolves(self):
-    #     url = reverse('aliments_off:result')
-    #     self.assertEquals(resolve(url).func.view_class, ResultView)
+    def test_result_url_resolves(self):
+        url = reverse('aliments_off:result', args=['15'])
+        self.assertEquals(resolve(url).func.view_class, ResultView)
+
+    def test_detail_url_resolves(self):
+        url = reverse('aliments_off:detail', args=['155'])
+        self.assertEquals(resolve(url).func.view_class, DetailProductView)
 
     def test_save_url_resolves(self):
         url = reverse('aliments_off:save')
