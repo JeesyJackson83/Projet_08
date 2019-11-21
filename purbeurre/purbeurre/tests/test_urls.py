@@ -23,14 +23,6 @@ class TestUrls(SimpleTestCase):
         url = reverse('profile')
         self.assertEquals(resolve(url).func, profile)
 
-    # def test_login_url_resolves(self):
-    #     url = reverse('login')
-    #     self.assertEquals(resolve(url).func, login)
-
-    # def test_logout_url_resolves(self):
-    #     url = reverse('logout')
-    #     self.assertEquals(resolve(url).func, logout)
-
     def test_search_url_resolves(self):
         url = reverse('aliments_off:search')
         self.assertEquals(resolve(url).func.view_class, SearchView)
