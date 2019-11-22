@@ -25,25 +25,22 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'https://jjpurbeurre.herokuapp.com/'
-]
+ALLOWED_HOSTS = ['https://jjpurbeurre.herokuapp.com/']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'homepage',
+    'aliments_off',
+    'users',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'purbeurre',
-    'homepage',
-    'aliments_off',
-    'users',
-    'crispy_forms',
 ]
 
 MIDDLEWARE = [
