@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 {% block body %}
 {% include "base_title_section.html" with title="Deconnecté" %}
-    <section class="">
-        <div class="container">
-  
-        <small class="text-muted">
-            <a href="{% url 'login' %}">LOG IN again</a>
-        </small>
+    <div class="row h-10 align-items-center justify-content-center text-center">
+        
+        <h2></br><a href="{% url 'login' %}">LOG IN again</a></br></br></h2>
+
+    
     </div>
 
 {% endblock %}

@@ -86,7 +86,7 @@ def SaveView(request):
 class MyProductsView(LoginRequiredMixin, ListView):
     """Show saved products."""
     template_name = 'aliments_off/my_products.html'
-    paginate_by = 1
+    paginate_by = 4
 
     def get_queryset(self):
         return SaveProducts.objects.filter(
