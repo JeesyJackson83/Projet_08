@@ -135,9 +135,16 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
+if DEBUG:
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, "static"),
+        '/app/purbeurre/static',
+    )
+else:
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, "static"),
+        '/app/purbeurre/static',
+    )
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
