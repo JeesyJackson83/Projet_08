@@ -138,12 +138,11 @@ STATIC_URL = '/static/'
 if DEBUG:
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, "static"),
-        '/app/purbeurre/static',
     )
 else:
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, "static"),
-        '/app/purbeurre/static',
+        '/app/purbeurre/static/',
     )
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
