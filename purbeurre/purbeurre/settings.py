@@ -148,3 +148,6 @@ LOGIN_URL = 'login'
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
+
+# show relevant errors in heroku logs
+DEBUG_PROPAGATE_EXCEPTIONS = True
