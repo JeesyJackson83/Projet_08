@@ -197,3 +197,7 @@ li.low {background-image: url('../img/codenutri/low.svg');}
         font-size: 2rem;
     }
 }
+
+.legal-img{
+    height: 40px;
+}
